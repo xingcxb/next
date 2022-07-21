@@ -1,10 +1,12 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import Index from './components/Index.vue'
 </script>
 
 <template>
-  <img id="logo" alt="Wails logo" src="./assets/images/logo-universal.png"/>
-  <HelloWorld/>
+<!--  <img id="logo" alt="Wails logo" src="./assets/images/logo-universal.png"/>-->
+<!--  <HelloWorld/>-->
+  <Index/>
 </template>
 
 <style>
