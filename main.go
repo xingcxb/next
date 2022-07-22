@@ -11,6 +11,9 @@ import (
 //go:embed frontend/dist
 var assets embed.FS
 
+//go:embed build/appicon.png
+var icon []byte
+
 func main() {
 	// Create an instance of the app structure
 	app := NewApp()
@@ -22,6 +25,7 @@ func main() {
 		Height:           768,
 		MinWidth:         1024,
 		MinHeight:        768,
+		DisableResize:    true,
 		Assets:           assets,
 		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
 		OnStartup:        app.startup,

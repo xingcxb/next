@@ -1,8 +1,8 @@
-html {
-    background-color: rgba(27, 38, 54, 1);
-    text-align: center;
-    color: white;
-}
+/*html {*/
+/*    background-color: rgba(27, 38, 54, 1);*/
+/*    text-align: center;*/
+/*    color: white;*/
+/*}*/
 
 body {
     margin: 0;
@@ -13,7 +13,9 @@ body {
 }
 
 @font-face {
-    font-family: "Nunito";
+    /*font-family: "Nunito";*/
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     src: local(""),
