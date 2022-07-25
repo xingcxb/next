@@ -61,23 +61,25 @@
     <el-col :offset="1" :span="22">
       <div class="things">
         <el-row style="height: 10px"></el-row>
-        <el-row style="height: 20px" justify="start" align="middle">
+        <el-row style="height: 25px" justify="start" align="middle">
           <el-col :offset="1" :span="8">
             <span
                 style="font-size: 20px;
                 color: black;
                 text-align: left;
+                align-content: center;
                 width: 100%"
             >
+              <!-- 下载文件名 -->
               {{ fileName }}
             </span>
           </el-col>
-          <el-col :span="8"></el-col>
-          <el-col :span="6">
-            <div class="handle">
-              <el-row style="height: 20px">
+          <el-col :span="7"></el-col>
+          <el-col :span="7" class="handle">
+<!--            <div class="handle">-->
+              <el-row style="height: 25px;" align="middle">
                 <el-col :span="1" :offset="3">
-                  <div style="text-align: center;vertical-align: middle">
+<!--                  <div style="text-align: center;vertical-align: middle">-->
                     <el-image
                         fit="fill"
                         src="/src/public/main/start_line.png"
@@ -85,10 +87,10 @@
                         class="smallImg"
                     >
                     </el-image>
-                  </div>
+<!--                  </div>-->
                 </el-col>
                 <el-col :span="1" :offset="3">
-                  <div style="text-align: center;vertical-align: middle">
+                  <!--<div style="text-align: center;vertical-align: middle">-->
                     <el-image
                         fit="fill"
                         src="/src/public/main/delete.png"
@@ -96,10 +98,10 @@
                         class="smallImg"
                     >
                     </el-image>
-                  </div>
+<!--                  </div>-->
                 </el-col>
                 <el-col :span="1" :offset="3">
-                  <div style="text-align: center;vertical-align: middle">
+<!--                  <div style="text-align: center;vertical-align: middle">-->
                     <el-image
                         fit="fill"
                         src="/src/public/main/file.png"
@@ -107,10 +109,10 @@
                         class="smallImg"
                     >
                     </el-image>
-                  </div>
+<!--                  </div>-->
                 </el-col>
                 <el-col :span="1" :offset="3">
-                  <div style="text-align: center;vertical-align: middle">
+<!--                  <div style="text-align: center;vertical-align: middle">-->
                     <el-image
                         fit="fill"
                         src="/src/public/main/link.png"
@@ -118,10 +120,10 @@
                         class="smallImg"
                     >
                     </el-image>
-                  </div>
+<!--                  </div>-->
                 </el-col>
                 <el-col :span="1" :offset="3">
-                  <div style="text-align: center;vertical-align: middle">
+<!--                  <div style="text-align: center;vertical-align: middle">-->
                     <el-image
                         fit="fill"
                         src="/src/public/main/about.png"
@@ -129,10 +131,10 @@
                         class="smallImg"
                     >
                     </el-image>
-                  </div>
+<!--                  </div>-->
                 </el-col>
               </el-row>
-            </div>
+<!--            </div>-->
           </el-col>
         </el-row>
       </div>
@@ -165,6 +167,10 @@ let fileName = ref('测试.txt')
   height: 15px;
 }
 
+.smallImg:hover {
+  cursor: pointer;
+}
+
 .things {
   height: 112px;
   width: 100%;
@@ -178,13 +184,14 @@ let fileName = ref('测试.txt')
 }
 
 .handle{
-  height: 20px;
+  height: 24px;
   width: 100%;
   border-radius: 10px;
   border: 1px solid var(--el-border-color);
-  margin-top: 10px;
+  margin: 0;
 }
 .handle:hover{
   border: 1px solid #504ff3;
+  background: #504ff3;
 }
 </style>
