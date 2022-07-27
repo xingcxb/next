@@ -61,80 +61,46 @@
     <el-col :offset="1" :span="22">
       <div class="things">
         <el-row style="height: 10px"></el-row>
-        <el-row style="height: 25px" justify="start" align="middle">
-          <el-col :offset="1" :span="8">
-            <span
-                style="font-size: 20px;
-                color: black;
-                text-align: left;
-                align-content: center;
-                width: 100%"
-            >
+        <el-row style="height: 25px" align="middle">
+          <el-col :offset="1" :span="9" style="cursor: default;color: #464d49;text-align: left">
               <!-- 下载文件名 -->
               {{ fileName }}
-            </span>
           </el-col>
-          <el-col :span="7"></el-col>
+          <el-col :span="6"></el-col>
           <el-col :span="7" class="handle">
-<!--            <div class="handle">-->
               <el-row style="height: 25px;" align="middle">
                 <el-col :span="1" :offset="3">
-<!--                  <div style="text-align: center;vertical-align: middle">-->
-                    <el-image
-                        fit="fill"
-                        src="/src/public/main/start_line.png"
-                        alt="start"
-                        class="smallImg"
-                    >
-                    </el-image>
-<!--                  </div>-->
+                  <icon-play-one theme="outline" size="24" class="smallImg" :strokeWidth="1"/>
                 </el-col>
                 <el-col :span="1" :offset="3">
-                  <!--<div style="text-align: center;vertical-align: middle">-->
-                    <el-image
-                        fit="fill"
-                        src="/src/public/main/delete.png"
-                        alt="delete"
-                        class="smallImg"
-                    >
-                    </el-image>
-<!--                  </div>-->
+                  <icon-close-small theme="outline" size="24" class="smallImg" :strokeWidth="1"/>
                 </el-col>
                 <el-col :span="1" :offset="3">
-<!--                  <div style="text-align: center;vertical-align: middle">-->
-                    <el-image
-                        fit="fill"
-                        src="/src/public/main/file.png"
-                        alt="delete"
-                        class="smallImg"
-                    >
-                    </el-image>
-<!--                  </div>-->
+                  <icon-folder-open theme="outline" size="17" class="smallImg" :strokeWidth="1"/>
                 </el-col>
                 <el-col :span="1" :offset="3">
-<!--                  <div style="text-align: center;vertical-align: middle">-->
-                    <el-image
-                        fit="fill"
-                        src="/src/public/main/link.png"
-                        alt="delete"
-                        class="smallImg"
-                    >
-                    </el-image>
-<!--                  </div>-->
+                  <icon-link-two theme="outline" size="17" class="smallImg" :strokeWidth="1"/>
                 </el-col>
                 <el-col :span="1" :offset="3">
-<!--                  <div style="text-align: center;vertical-align: middle">-->
-                    <el-image
-                        fit="fill"
-                        src="/src/public/main/about.png"
-                        alt="delete"
-                        class="smallImg"
-                    >
-                    </el-image>
-<!--                  </div>-->
+                  <icon-view-list theme="outline" size="17" class="smallImg" :strokeWidth="1"/>
                 </el-col>
               </el-row>
-<!--            </div>-->
+          </el-col>
+        </el-row>
+        <el-row style="height: 30px"></el-row>
+        <el-row>
+          <el-col :offset="1" :span="22">
+            <el-progress
+                :percentage="100"
+                :text-inside="true"
+                :show-text="false"
+            />
+          </el-col>
+        </el-row>
+        <el-row style="height: 10px"></el-row>
+        <el-row>
+          <el-col :offset="1" :span="2" style="color: #909090;font-size: 14px">
+            {{downloadedSize}}MB/{{totalSize}}MB
           </el-col>
         </el-row>
       </div>
@@ -147,7 +113,10 @@ import {ref} from 'vue'
 
 // 文件名
 let fileName = ref('测试.txt')
-
+// 已下载的大小
+let downloadedSize = ref(0)
+// 文件大小
+let totalSize = ref(0)
 
 
 </script>
@@ -165,10 +134,12 @@ let fileName = ref('测试.txt')
 .smallImg {
   width: 15px;
   height: 15px;
+  color: #000000;
 }
 
 .smallImg:hover {
   cursor: pointer;
+  color: #ffffff;
 }
 
 .things {
@@ -180,7 +151,7 @@ let fileName = ref('测试.txt')
 }
 
 .things:hover {
-  border: 1px solid #504ff3;
+  border: 1px solid #6dd5fa;
 }
 
 .handle{
@@ -191,7 +162,7 @@ let fileName = ref('测试.txt')
   margin: 0;
 }
 .handle:hover{
-  border: 1px solid #504ff3;
-  background: #504ff3;
+  border: 1px solid #66CCFF;
+  background: #66CCFF;
 }
 </style>
