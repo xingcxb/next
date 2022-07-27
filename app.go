@@ -2,7 +2,9 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
+	"next/common"
 )
 
 // App struct
@@ -24,4 +26,13 @@ func (a *App) startup(ctx context.Context) {
 // Greet returns a greeting for the given name
 func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
+}
+
+// GetAppInfo 获取程序基础信息
+func (a *App) GetAppInfo() string {
+	b, err := json.Marshal(common.App)
+	if err != nil {
+		return ""
+	}
+	return string(b)
 }
