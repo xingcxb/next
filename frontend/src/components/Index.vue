@@ -5,7 +5,7 @@
     <el-col :span="17" style="background: white;"></el-col>
   </el-row>
   <el-row class="main-view">
-    <el-col :span="2" class="left-view" data-wails-drag>
+    <el-col :span="2" class="left-view">
       <LeftAnchor/>
     </el-col>
     <el-col :span="5" class="center-view">
