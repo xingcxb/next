@@ -2,7 +2,7 @@ module next
 
 go 1.18
 
-require github.com/wailsapp/wails/v2 v2.0.0-beta.40
+require github.com/wailsapp/wails/v2 v2.0.0-beta.42
 
 require (
 	github.com/bep/debounce v1.2.1 // indirect
